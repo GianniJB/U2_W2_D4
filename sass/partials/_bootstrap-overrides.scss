@@ -1,0 +1,112 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../../bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+/* BUTTONS */
+
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 2.5rem;
+
+/* GUTTER */
+
+$grid-gutter-width: 0.5rem;
+
+/* CARDS */
+
+$card-bg: #212529;
+$card-color: #0dcaf0;
+$card-border-radius: 2rem;
+
+/* CAMBIO COLORE DANGER */
+
+$red: #ff0077;
+
+
+/* INFO */
+
+$cyan: #00ffea;
+
+/* LIGHT */
+
+$light: #f3eeff;
+
+/* CHANGE BORDER-RADIUS */
+
+$badge-border-radius: 15px;
+$btn-border-radius: 30px;
+$btn-border-radius-sm: 100px;
+$btn-border-radius-lg: 100px;
+$input-border-radius: 50px;
+
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import "../../bootstrap/scss/variables";
+@import "../../bootstrap/scss/variables-dark";
+
+// 4. Include any default map overrides here
+
+/* ADD FONT-SIZES */
+$custom-font-sizes: (
+    7: 0.9rem,
+    8: 0.75rem,
+    9: 0.5rem,
+    10: 0.25rem
+);
+
+$font-sizes: map-merge($font-sizes, $custom-font-sizes);
+
+/* ADD BORDER-WIDTHS */
+$custom-border-widths: (
+    6: 6px,
+    7: 7px,
+    8: 8px,
+    9: 9px,
+    10: 10px
+);
+
+$border-widths: map-merge($border-widths, $custom-border-widths);
+
+/* ADD COLORS TO THEME-COLORS-MAP */
+
+$epicode-colors: (
+    "epicode-1": #5726c3,
+    "epicode-2": #8625a5,
+    "epicode-3": #cb2376
+);
+
+$theme-colors: map-merge($theme-colors, $epicode-colors);
+
+// 5. Include remainder of required parts
+@import "../../bootstrap/scss/maps";
+@import "../../bootstrap/scss/mixins";
+@import "../../bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../../bootstrap/scss/utilities";
+@import "../../bootstrap/scss/reboot";
+@import "../../bootstrap/scss/type";
+@import "../../bootstrap/scss/images";
+@import "../../bootstrap/scss/containers";
+@import "../../bootstrap/scss/grid";
+@import "../../bootstrap/scss/helpers";
+/*OTHERS*/
+@import "../../bootstrap/scss/accordion";
+@import "../../bootstrap/scss/badge";
+@import "../../bootstrap/scss/button-group";
+@import "../../bootstrap/scss/buttons";
+@import "../../bootstrap/scss/dropdown";
+@import "../../bootstrap/scss/card";
+@import "../../bootstrap/scss/forms";
+@import "../../bootstrap/scss/nav";
+@import "../../bootstrap/scss/navbar";
+@import "../../bootstrap/scss/pagination";
+@import "../../bootstrap/scss/type";
+@import "../../bootstrap/scss/images";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../../bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
